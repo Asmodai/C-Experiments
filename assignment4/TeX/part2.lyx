@@ -1,0 +1,1142 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass scrbook
+\begin_preamble
+% increases link area for cross-references and autoname them
+\AtBeginDocument{\renewcommand{\ref}[1]{\mbox{\autoref{#1}}}}
+\addto\extrasenglish{%
+ \renewcommand*{\equationautorefname}[1]{}
+ \renewcommand{\sectionautorefname}{sec.\negthinspace}
+ \renewcommand{\subsectionautorefname}{sec.\negthinspace}
+ \renewcommand{\subsubsectionautorefname}{sec.\negthinspace}
+ \renewcommand{\figureautorefname}{Figure \negthinspace}
+ \renewcommand{\tableautorefname}{Table \negthinspace}
+}
+
+\renewcommand{\thefigure}{\arabic{figure}}
+
+% in case somebody want to have the label "Equation"
+%\renewcommand{\eqref}[1]{Equation~(\negthinspace\autoref{#1})}
+
+% that links to image floats jumps to the beginning
+% of the float and not to its caption
+\usepackage[figure]{hypcap}
+
+% the pages of the TOC is numbered roman
+% and a pdf-bookmark for the TOC is added
+\let\myTOC\tableofcontents
+\renewcommand\tableofcontents{%
+  \frontmatter
+  \pdfbookmark[1]{\contentsname}{}
+  \myTOC
+  \mainmatter }
+
+% makes caption labels bold
+\setkomafont{captionlabel}{\bfseries}
+\setcapindent{1em}
+
+% enables calculations
+\usepackage{calc}
+
+% fancy page header/footer settings
+\renewcommand{\chaptermark}[1]{\markboth{#1}{#1}}
+\renewcommand{\sectionmark}[1]{\markright{\thesection\ #1}}
+
+% increases the bottom float placement fraction
+\renewcommand{\bottomfraction}{0.5}
+
+% avoids that floats are placed above its sections
+\let\mySection\section\renewcommand{\section}{\suppressfloats[t]\mySection}
+
+%
+\usepackage[parfill]{parskip}
+\usepackage{hyperref}
+\usepackage{bookmark}
+\usepackage{xstring}
+\usepackage{makeidx}
+
+\makeindex
+\end_preamble
+\options intoc,bibliography=totoc,index=totoc,BCOR10mm,captions=tableheading,titlepage,fleqn
+\use_default_options true
+\begin_modules
+customHeadersFooters
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman beraserif
+\font_sans berasans
+\font_typewriter beramono
+\font_default_family sfdefault
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\float_placement h
+\paperfontsize 12
+\spacing single
+\use_hyperref true
+\pdf_title "GNU Lisp Machine Manual"
+\pdf_author "Paul Ward"
+\pdf_keywords "Lisp, Lisp Machine"
+\pdf_bookmarks true
+\pdf_bookmarksnumbered true
+\pdf_bookmarksopen true
+\pdf_bookmarksopenlevel 1
+\pdf_breaklinks false
+\pdf_pdfborder true
+\pdf_colorlinks true
+\pdf_backref false
+\pdf_pdfusetitle true
+\pdf_quoted_options "pdfpagelayout=OneColumn, pdfnewwindow=true, pdfstartview=XYZ, plainpages=false"
+\papersize a4paper
+\use_geometry false
+\use_amsmath 2
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date true
+\use_refstyle 0
+\branch chapter-1
+\selected 1
+\filename_suffix 0
+\color #ffaa00
+\end_branch
+\branch chapter-2
+\selected 1
+\filename_suffix 0
+\color #55aaff
+\end_branch
+\branch Summary
+\selected 1
+\filename_suffix 0
+\color #7f7f7f
+\end_branch
+\branch Acknowledgments
+\selected 1
+\filename_suffix 0
+\color #ffff00
+\end_branch
+\branch Appendix
+\selected 1
+\filename_suffix 0
+\color #faf0e6
+\end_branch
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 2
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 2
+\paperpagestyle fancy
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Left Header
+\begin_inset Argument
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+sectionmark
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+rightmark
+\end_layout
+
+\end_inset
+
+
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+Enable page headers and add the chapter to the header line.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Right Header
+\begin_inset Argument
+status open
+
+\begin_layout Plain Layout
+Super Hangman
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Left Footer
+
+\end_layout
+
+\begin_layout Center Footer
+\begin_inset Argument
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+thepage
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Right Footer
+
+\end_layout
+
+\begin_layout Chapter
+The Game
+\end_layout
+
+\begin_layout Section
+Your first game
+\end_layout
+
+\begin_layout Standard
+When you first launch
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+mbox{
+\backslash
+noun{Super Hangman}}
+\end_layout
+
+\end_inset
+
+, you will be presented with a game screen similar to that in 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Initial-load-screen"
+
+\end_inset
+
+.
+ This screen has two main parts which display various aspects of the current
+ game session.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement h
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename new_game.png
+	scale 50
+	rotateOrigin center
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Initial-load-screen"
+
+\end_inset
+
+Initial load screen
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The first part, the black portion, displays the letters you have currently
+ guessed, the number of incorrect guesses you have left before the game
+ ends, and information about the current game (such as the number of words
+ the game can choose from).
+\end_layout
+
+\begin_layout Standard
+The second part, the blue portion, displays the word you must guess, information
+ on your current guess, and a traditional Hangman-like pictorial.
+\end_layout
+
+\begin_layout Standard
+Once this screen has loaded, you are ready to make your first guess.
+\end_layout
+
+\begin_layout Section
+Making your first guess
+\end_layout
+
+\begin_layout Standard
+Simply press any alphabetic key on your keyboard to start making a guess.
+ You need not worry about pressing the 
+\family typewriter
+SHIFT
+\family default
+ or 
+\family typewriter
+CAPS LOCK
+\family default
+ keys, as all words and guesses are automatically be treated as being in
+ capital letters.
+ Any non-alphabetic keys will be ignored without being treated as incorrect
+ guesses.
+\end_layout
+
+\begin_layout Standard
+Once you have made your guess, the game will indicate whether your guess
+ is correct or incorrect.
+ If your guess completes a word, the game will end and you will be informed
+ of your success.
+ Likewise, if you have used up all your guesses, you will be informed of
+ your loss.
+ Either way, you will be asked if you want to start a new game.
+ Simply press 
+\family typewriter
+Y
+\family default
+ for a new game, or 
+\family typewriter
+N
+\family default
+ to exit 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+mbox{
+\backslash
+noun{Super Hangman}}
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Section
+The results of guessing
+\end_layout
+
+\begin_layout Standard
+As we saw in the previous section, several things will happen after you
+ make a guess and there will be various changes to the screen.
+ Let us look at some of these changes.
+\end_layout
+
+\begin_layout Subsection
+Correct guesses
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement h
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename correct_guess.png
+	scale 50
+	rotateOrigin center
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:A-correct-guess"
+
+\end_inset
+
+A correct guess
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+When you make a correct guess, the letter will be added to the 
+\begin_inset Quotes eld
+\end_inset
+
+Guesses
+\begin_inset Quotes erd
+\end_inset
+
+ section, coloured green.
+ This is to remind you that you have previously guessed this letter, and
+ that it was correct.
+ The placeholders on the right-hand side of the blue section will display
+ each letter that has been correctly guessed.
+ Should the word contain more than one instance of a letter, then they will
+ all be shown.
+ The game will also indicate that it was correct.
+ The screen for this will look similar to 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:A-correct-guess"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Incorrect guesses
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement h
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename incorrect_guess.png
+	scale 50
+	rotateOrigin center
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:An-incorrect-guess"
+
+\end_inset
+
+An incorrect guess
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+When you make an incorrect guess, the letter will be added to the 
+\begin_inset Quotes eld
+\end_inset
+
+Guesses
+\begin_inset Quotes erd
+\end_inset
+
+ section, coloured red.
+ This is to remind you that you have previously guessed this letter, and
+ that it was incorrect.
+ The game will also indicate that your guess was wrong.
+ The screen for this will look similar to 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:An-incorrect-guess"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Repeated guesses
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement h
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename repeat_guess.png
+	scale 50
+	rotateOrigin center
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:A-repeat-guess"
+
+\end_inset
+
+A repeat guess
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+When you repeat a previous guess, the game will indicate this and will not
+ add the letter to the 
+\begin_inset Quotes eld
+\end_inset
+
+Guesses
+\begin_inset Quotes erd
+\end_inset
+
+ section.
+ The number of incorrect guesses that you have left will go down by one
+ and the stick figure will be one step closer to oblivion.
+ The screen for this will look similar to 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:A-repeat-guess"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Winning a game
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement h
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename game_won.png
+	scale 50
+	rotateOrigin center
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Winning-a-game"
+
+\end_inset
+
+Winning a game
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+When you have correctly guessed all the letters in the word, you will have
+ won the game.
+ Congratulations! The game will inform you of your success and congratulate
+ you.
+ The screen will look similar to that in 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Winning-a-game"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Losing a game
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement h
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename game_lost.png
+	scale 50
+	rotateOrigin center
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Losing-a-game"
+
+\end_inset
+
+Losing a game
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+If you are unlucky and use up all your guesses, you will have lost the game.
+ Hard luck! Do not worry, though, the stick figure is perfectly fine, he
+ is immortal--that's why both he and the hangman have smiles on their faces
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+Actually, they both smile because the old DOS extended character set--code
+ page 437--doesn't have a glyph that represents a sad face for some reason.
+ I guess Microsoft wanted 
+\size scriptsize
+[the illusion of]
+\size default
+ everyone 
+\size scriptsize
+[appearing]
+\size default
+ to be happy!
+\end_layout
+
+\end_inset
+
+.
+ When you lose, the game field will change from blue to red, and the word
+ the game chose will be displayed.
+ The screen will look similar to that in 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Losing-a-game"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Chapter
+Hangman Rules
+\end_layout
+
+\begin_layout Standard
+The core of this game is based on the old pencil and paper game of hangman
+ with a few limitations due to modern computer hardware:
+\end_layout
+
+\begin_layout Itemize
+Your word list may have as many words as your computer can handle--we have
+ had up to 128 words loaded!
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+Of course, this is only for our imaginary 8086! On recent hardware, you
+ can have many thousands of words loaded.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+The number of guesses specified when you load the game cannot be higher
+ than 16, due to limitations with Intel CPUs.
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+While probably true in the 1980s, the `16 guess' limit is purely down to
+ the graphics.
+ More than 16 guesses presented the problem of having to design and partition
+ too many graphical elements to visually display the hangman game in an
+ easy manner.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+The Intel version requires at 
+\emph on
+least
+\emph default
+ 256 kilobytes of memory.
+\end_layout
+
+\begin_layout Section
+The graphics
+\end_layout
+
+\begin_layout Standard
+Just like the pencil and paper game of Hangman, 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+mbox{
+\backslash
+noun{Super Hangman}}
+\end_layout
+
+\end_inset
+
+ uses a graphical representation of the game and, just like the pencil and
+ paper game, there is a specific order in which the game 
+\begin_inset Quotes eld
+\end_inset
+
+state
+\begin_inset Quotes erd
+\end_inset
+
+ is drawn, so that the player can see how far from oblivion the stick figure
+ is.
+\end_layout
+
+\begin_layout Standard
+The graphics chosen for each new game will depend on the total number of
+ guesses that the player can have, always allowing the last guess to be
+ the stick figures positioned on the gallows, at the edge of oblivion.
+\end_layout
+
+\begin_layout Subsection
+The field
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement h
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename pic_empty.png
+	rotateOrigin center
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:An-empty-field"
+
+\end_inset
+
+An empty field
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+If the game is run with 16 guesses, the game will start with a picture of
+ an empty field, after which incorrect guesses will result in the gallows
+ being formed, and then the hangman, and finally the condemned stick figure.
+\end_layout
+
+\begin_layout Standard
+The field will look as it does in 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:An-empty-field"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+The gallows
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement h
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename pic_gallows.png
+	rotateOrigin center
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:The-gallows"
+
+\end_inset
+
+The gallows
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+If the game is run with between 15 and 8 guesses, or you have between 15
+ and 8 guesses remaining, then the gallows
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+If you look really close, you'll spot a glitch with some of the characters.
+ Specifically, the joints between a double border and a single line.
+ This is due to the Windows command prompt failing to use the correct glyphs
+ from code page 437 for some reason.
+ I couldn't use the Unicode alternatives either.
+\end_layout
+
+\end_inset
+
+ will be constructed.
+ Once built, your next incorrect guess will start drawing the hangman.
+\end_layout
+
+\begin_layout Standard
+The gallows will look like those in figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:The-gallows"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+The hangman
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement h
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename pic_hangman.png
+	rotateOrigin center
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:The-hangman"
+
+\end_inset
+
+The hangman
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+If the game is run with between 7 and 5 guesses, or you have between 7 and
+ 5 guesses remaining, then the hangman will start to appear.
+ Once he has fully appeared, your next incorrect guess will start drawing
+ the condemned.
+\end_layout
+
+\begin_layout Standard
+The hangman standing proudly next to the gallows will look like 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:The-hangman"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+The condemned
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement h
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename pic_condemned.png
+	rotateOrigin center
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:The-condemned"
+
+\end_inset
+
+The condemned
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Once the gallows and the hangman have been drawn, you will have 5 guesses
+ remaining, with each incorrect guess resulting in the condemned arriving
+ at the noose, piece by piece.
+ When you are down to 1 guess left, the condemned will have been completely
+ drawn, and the next incorrect guess will send him to his maker.
+\end_layout
+
+\begin_layout Standard
+The condemned in his noose will look like 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:The-condemned"
+
+\end_inset
+
+.
+\end_layout
+
+\end_body
+\end_document

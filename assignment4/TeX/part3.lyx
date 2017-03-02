@@ -1,0 +1,500 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass scrbook
+\options bibliography=totoc,index=totoc,BCOR10mm,captions=tableheading,titlepage,fleqn
+\use_default_options true
+\master Hangman.lyx
+\begin_modules
+customHeadersFooters
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth -1
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Left Header
+\begin_inset Argument
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+sectionmark
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+rightmark
+\end_layout
+
+\end_inset
+
+
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+Enable page headers and add the chapter to the header line.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Right Header
+\begin_inset Argument
+status open
+
+\begin_layout Plain Layout
+Super Hangman
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Left Footer
+
+\end_layout
+
+\begin_layout Center Footer
+\begin_inset Argument
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+thepage
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Right Footer
+
+\end_layout
+
+\begin_layout Chapter
+Commodore Disk Loading Problems
+\end_layout
+
+\begin_layout Section*
+Brand of disk drive
+\end_layout
+
+\begin_layout Standard
+At present, our C64 product line only supports Commodore disk drives (i.e.
+ 1541 & 1571).
+ We cannot guarantee compatibility with other brands.
+ We have a built-in 
+\begin_inset Quotes eld
+\end_inset
+
+fast loader
+\begin_inset Quotes erd
+\end_inset
+
+ that can load programs over 10 times faster than a normal 1541 load.
+ This requires the internals of the disk drive to be very close to what
+ a Commodore disk drive looks like.
+\end_layout
+
+\begin_layout Section*
+Random boot problems
+\end_layout
+
+\begin_layout Standard
+We have found that a variety of problems can be caused by equipment being
+ attached to your C64.
+ We therefore recommend that all peripherals and cartridges (particularly
+ 
+\begin_inset Quotes eld
+\end_inset
+
+fast loaders
+\begin_inset Quotes erd
+\end_inset
+
+) be removed from your C64 computer prior to running any of our games.
+ People are surprised to find out that just turning the power off to these
+ devices is not enough.
+ Our software utilizes all 64K of RAM in the system and uses memory configuratio
+ns that differ from other game software.
+ This tends to upset modems and printers and the like.
+\end_layout
+
+\begin_layout Section*
+Drive alignment problems
+\end_layout
+
+\begin_layout Standard
+We have found that our original 
+\begin_inset Quotes eld
+\end_inset
+
+fast loader
+\begin_inset Quotes erd
+\end_inset
+
+ required 1541 and 1571 disk drive alignment to be in close adjustment.
+ A weakness in Commodore's 1541 disk drive design (along with the fact that
+ other companies' older protection schemes involved the stepper motor banging
+ itself against the track zero stop) causes many disk drives to become out
+ of alignment.
+ Both Commodore and other companies have wised up, but it still leaves a
+ lot of disk drives partially out of alignment.
+ We have therefore improved our 
+\begin_inset Quotes eld
+\end_inset
+
+fast loader
+\begin_inset Quotes erd
+\end_inset
+
+ software to be more forgiving.
+ Of course, the best long-term solution is to get your disk drive aligned.
+\end_layout
+
+\begin_layout Chapter
+DOS problems
+\end_layout
+
+\begin_layout Section*
+Not enough memory
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+mbox{
+\backslash
+noun{Super Hangman}}
+\end_layout
+
+\end_inset
+
+ requires at least 256K of RAM to run, and will not start up with anything
+ less than 256K.
+\end_layout
+
+\begin_layout Section*
+Not enough disk space
+\end_layout
+
+\begin_layout Standard
+The DOS version of 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+mbox{
+\backslash
+noun{Super Hangman}}
+\end_layout
+
+\end_inset
+
+ was designed to allow you to use a word file on another disk.
+ If you do not have two disk drives in your IBM PC/PCjr or clone, then you
+ will need to have a second disk ready to use once the system prompts you
+ to insert it.
+ This disk will contain the word file as indicated by the command you type
+ to start the game.
+\end_layout
+
+\begin_layout Section*
+Monochromatic displays
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+mbox{
+\backslash
+noun{Super Hangman}}
+\end_layout
+
+\end_inset
+
+ was designed for systems with CGA or better (preferably EGA systems with
+ at least 16 colours).
+ It will still work on a monochrome display, but it will not look as good.
+\end_layout
+
+\begin_layout Chapter
+Frequently Asked Questions
+\end_layout
+
+\begin_layout Section*
+Is this game too violent for my children?
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+mbox{
+\backslash
+noun{Super Hangman}}
+\end_layout
+
+\end_inset
+
+ is based on the pencil and paper version of Hangman and, although it does
+ depict capital punishment and the taking of a life, it does so in a non-violent
+ and non-graphic manner.
+\end_layout
+
+\begin_layout Section*
+Do you have a port for my machine?
+\end_layout
+
+\begin_layout Standard
+As well as the Commodore 64/128, Apple II, and IBM PC/PCjr versions of 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+mbox{
+\backslash
+noun{Super Hangman}}
+\end_layout
+
+\end_inset
+
+, we also have versions for the Apple Macintosh, the Sun-3 series of workstation
+s from Sun Microsystems, the VAX-11 minicomputers from Digital Equipment
+ Corporation, and the Apollo Domain workstations.
+\end_layout
+
+\begin_layout Section*
+It's spelled `color', not `colour', what is wrong with you people?
+\end_layout
+
+\begin_layout Standard
+We're British, thus this manual uses British spellings of words, ergo it's
+ spelt `colour'.
+\end_layout
+
+\begin_layout Section*
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+mbox{
+\backslash
+gothfamily Wo is:t das: Deutcs:he Computers:peile bitte?}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Nein.
+ Das ist verboten unter das Strafgesetzbuch
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+A few german friends of mine laughed when they read this, and then begged
+ me to leave it in this form, rather than the correct 
+\begin_inset Quotes eld
+\end_inset
+
+Wo ist die deutschsprachige Version dieses Computerspiels bitte?
+\begin_inset Quotes erd
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Section*
+
+\family roman
+ROMANES EVNT DOMVS
+\end_layout
+
+\begin_layout Standard
+Go away, Brian
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+This, of course, should be 
+\begin_inset Quotes eld
+\end_inset
+
+ROMANI ITE DOMVM
+\begin_inset Quotes erd
+\end_inset
+
+.
+ Graham Chapman and John Cleese at their best.
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Section*
+I have the VAX version, but it doesn't work with VMS.
+\end_layout
+
+\begin_layout Standard
+The VAX-11/780 we have access to here runs Berkely Unix, so we cannot write
+ a VMS port at this time.
+\end_layout
+
+\begin_layout Section*
+I cannot find the cheat codes.
+\end_layout
+
+\begin_layout Standard
+You need to look harder.
+\end_layout
+
+\begin_layout Section*
+The cheat codes do not work.
+\end_layout
+
+\begin_layout Standard
+Did you try standing on your head while entering the codes?
+\end_layout
+
+\begin_layout Section*
+When I get to the second level, the door leading to the toilet is locked,
+ and I cannot find the key at all, even if I complete the McDonalds level.
+ Help!
+\end_layout
+
+\begin_layout Standard
+Wrong game.
+\end_layout
+
+\begin_layout Section*
+Will this game work on a Newbury NewBrain?
+\end_layout
+
+\begin_layout Standard
+Nope, never.
+\end_layout
+
+\end_body
+\end_document

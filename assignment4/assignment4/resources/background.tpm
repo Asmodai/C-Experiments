@@ -1,0 +1,91 @@
+// -*- Mode: C++ -*-
+// background.tpm --- 'Background' text picmap resource.
+//
+// Copyright (c) 2014 Paul Ward <asmodai@gmail.com>
+//
+// Time-stamp: <Friday Apr 18, 2014 23:18:32 asmodai>
+// Revision:   2
+//
+// Author:     Paul Ward <asmodai@gmail.com>
+// Maintainer: Paul Ward <asmodai@gmail.com>
+// Created:    18 Apr 2014 23:17:25
+// Keywords:   
+// URL:        not distributed yet
+//
+// {{{ License:
+//
+// This file is part of Assignment 4.
+//
+// This program is free software; you can redistribute it and/or
+// modify it under the terms of the GNU General Public License
+// as published by the Free Software Foundation; either version 3
+// of the License, or (at your option) any later version.
+//
+// This program is distributed in the hope that it will be useful,
+// but WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+// GNU General Public License for more details.
+//
+// You should have received a copy of the GNU General Public License
+// along with this program; if not, see <http://www.gnu.org/licenses/>.
+//
+// }}}
+// {{{ Commentary:
+
+// }}}
+
+/**
+ * @file background.tpm
+ * @author Paul Ward
+ * @brief 'Background' text picmap resource.
+ */
+
+#pragma once
+#ifndef _TPM_background_hpp_
+#define _TPM_background_hpp_
+
+#define BACKGROUND_width  22
+#define BACKGROUND_height 10
+
+#if defined(OVISION_UNICODE)
+# define A (char_t)0x2591
+# define B (char_t)0x2592
+#else
+# define A (char_t)176
+# define B (char_t)177
+#endif
+static char_t BACKGROUND_elems[] = {
+  A, A, A, A, A, A, A, A, A, A, A, A, A, A, A, A, A, A, A, A, A, A,
+  A, A, A, A, A, A, A, A, A, A, A, A, A, A, A, A, A, A, A, A, A, A,
+  A, A, A, A, A, A, A, A, A, A, A, A, A, A, A, A, A, A, A, A, A, A,
+  A, A, A, A, A, A, A, A, A, A, A, A, A, A, A, A, A, A, A, A, A, A,
+  A, A, A, A, A, A, A, A, A, A, A, A, A, A, A, A, A, A, A, A, A, A,
+  A, A, A, A, A, A, A, A, A, A, A, A, A, A, A, A, A, A, A, A, A, A,
+  A, A, A, A, A, A, A, A, A, A, A, A, A, A, A, A, A, A, A, A, A, A,
+  A, A, A, A, A, A, A, A, A, A, A, A, A, A, A, A, A, A, A, A, A, A,
+  A, A, A, A, A, A, A, A, A, A, A, A, A, A, A, A, A, A, A, A, A, A,
+  B, B, B, B, B, B, B, B, B, B, B, B, B, B, B, B, B, B, B, B, B, B
+};
+#undef A
+#undef B
+
+#define A bg_blue | bg_intense | fg_cyan
+#define B bg_green | fg_green | fg_intense
+static attr_t BACKGROUND_attrs[] = {
+  A, A, A, A, A, A, A, A, A, A, A, A, A, A, A, A, A, A, A, A, A, A,
+  A, A, A, A, A, A, A, A, A, A, A, A, A, A, A, A, A, A, A, A, A, A,
+  A, A, A, A, A, A, A, A, A, A, A, A, A, A, A, A, A, A, A, A, A, A,
+  A, A, A, A, A, A, A, A, A, A, A, A, A, A, A, A, A, A, A, A, A, A,
+  A, A, A, A, A, A, A, A, A, A, A, A, A, A, A, A, A, A, A, A, A, A,
+  A, A, A, A, A, A, A, A, A, A, A, A, A, A, A, A, A, A, A, A, A, A,
+  A, A, A, A, A, A, A, A, A, A, A, A, A, A, A, A, A, A, A, A, A, A,
+  A, A, A, A, A, A, A, A, A, A, A, A, A, A, A, A, A, A, A, A, A, A,
+  A, A, A, A, A, A, A, A, A, A, A, A, A, A, A, A, A, A, A, A, A, A,
+  B, B, B, B, B, B, B, B, B, B, B, B, B, B, B, B, B, B, B, B, B, B
+};
+#undef A
+#undef B
+
+#endif // !_TPM_background_hpp_
+
+// background.tpm ends here

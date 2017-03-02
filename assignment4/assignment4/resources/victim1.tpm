@@ -1,0 +1,92 @@
+// -*- Mode: C++ -*-
+// background.tpm --- 'victim1' text picmap resource.
+//
+// Copyright (c) 2014 Paul Ward <asmodai@gmail.com>
+//
+// Time-stamp: <Friday Apr 18, 2014 23:18:32 asmodai>
+// Revision:   2
+//
+// Author:     Paul Ward <asmodai@gmail.com>
+// Maintainer: Paul Ward <asmodai@gmail.com>
+// Created:    18 Apr 2014 23:17:25
+// Keywords:   
+// URL:        not distributed yet
+//
+// {{{ License:
+//
+// This file is part of Assignment 4.
+//
+// This program is free software; you can redistribute it and/or
+// modify it under the terms of the GNU General Public License
+// as published by the Free Software Foundation; either version 3
+// of the License, or (at your option) any later version.
+//
+// This program is distributed in the hope that it will be useful,
+// but WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+// GNU General Public License for more details.
+//
+// You should have received a copy of the GNU General Public License
+// along with this program; if not, see <http://www.gnu.org/licenses/>.
+//
+// }}}
+// {{{ Commentary:
+
+// }}}
+
+/**
+ * @file victim1.tpm
+ * @author Paul Ward
+ * @brief 'victim1' text picmap resource.
+ */
+
+#pragma once
+#ifndef TPM_victim1_hpp_
+#define _TPM_victim1_hpp_
+
+#define VICTIM1_width  3
+#define VICTIM1_height 4
+#if defined(OVISION_UNICODE)
+# define A (char_t)0x2502
+# define B (char_t)0x263B
+# define C L'\\'
+# define D L'/'
+# define E (char_t)0x2591
+# define F L' '
+#else
+# define A (char_t)179
+# define B L'O'
+# define C L'\\'
+# define D L'/'
+# define E (char_t)176
+# define F L' '
+#endif
+static char_t VICTIM1_elems[] = {
+  E, A, E,
+  E, B, E,
+  D, A, C,
+  D, F, C,
+};
+#undef A
+#undef B
+#undef C
+#undef D
+#undef E
+#undef F
+
+#define A fg_white | fg_intense | bg_cyan
+#define B bg_blue | bg_intense | fg_cyan
+#define C fg_yellow | bg_blue
+static attr_t VICTIM1_attrs[] = {
+  B, C, B,
+  B, A, B,
+  A, A, A,
+  A, A, A,
+};
+#undef A
+#undef B
+#undef C
+
+#endif // !_TPM_victim1_hpp_
+
+// victim1.tpm ends here

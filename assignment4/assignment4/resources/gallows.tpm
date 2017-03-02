@@ -1,0 +1,108 @@
+// -*- Mode: C++ -*-
+// background.tpm --- 'Gallows' text picmap resource.
+//
+// Copyright (c) 2014 Paul Ward <asmodai@gmail.com>
+//
+// Time-stamp: <Friday Apr 18, 2014 23:18:32 asmodai>
+// Revision:   2
+//
+// Author:     Paul Ward <asmodai@gmail.com>
+// Maintainer: Paul Ward <asmodai@gmail.com>
+// Created:    18 Apr 2014 23:17:25
+// Keywords:   
+// URL:        not distributed yet
+//
+// {{{ License:
+//
+// This file is part of Assignment 4.
+//
+// This program is free software; you can redistribute it and/or
+// modify it under the terms of the GNU General Public License
+// as published by the Free Software Foundation; either version 3
+// of the License, or (at your option) any later version.
+//
+// This program is distributed in the hope that it will be useful,
+// but WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+// GNU General Public License for more details.
+//
+// You should have received a copy of the GNU General Public License
+// along with this program; if not, see <http://www.gnu.org/licenses/>.
+//
+// }}}
+// {{{ Commentary:
+
+// }}}
+
+/**
+ * @file gallows.tpm
+ * @author Paul Ward
+ * @brief 'Gallows' text picmap resource.
+ */
+
+#pragma once
+#ifndef TPM_gallows_hpp_
+#define _TPM_gallows_hpp_
+
+#define GALLOWS1_width  9
+#define GALLOWS1_height 8
+
+#if defined(OVISION_UNICODE)
+# define A (char_t)0x2551
+# define B (char_t)0x2550
+# define C (char_t)0x2564
+# define D (char_t)0x2554
+# define E (char_t)0x2557
+# define F (char_t)0x255F
+# define G (char_t)0x2562
+# define H (char_t)0x2500
+# define I (char_t)0x2591
+#else
+# define A (char_t)186
+# define B (char_t)205
+# define C (char_t)209
+# define D (char_t)201
+# define E (char_t)187
+# define F (char_t)199
+# define G (char_t)182
+# define H (char_t)196
+# define I (char_t)176
+#endif
+static char_t GALLOWS1_elems[] = {
+  D, B, B, B, C, B, B, B, E,
+  A, I, I, I, I, I, I, I, A,
+  A, I, I, I, I, I, I, I, A,
+  A, I, I, I, I, I, I, I, A,
+  A, I, I, I, I, I, I, I, A,
+  F, H, H, H, H, H, H, H, G,
+  A, I, I, I, I, I, I, I, A,
+  A, I, I, I, I, I, I, I, A
+};
+#undef A
+#undef B
+#undef C
+#undef D
+#undef E
+#undef F
+#undef G
+#undef H
+#undef I
+
+#define A fg_yellow | bg_blue
+#define B bg_blue | bg_intense | fg_cyan
+static attr_t GALLOWS1_attrs[] = {
+  A, A, A, A, A, A, A, A, A,
+  A, B, B, B, B, B, B, B, A,
+  A, B, B, B, B, B, B, B, A,
+  A, B, B, B, B, B, B, B, A,
+  A, B, B, B, B, B, B, B, A,
+  A, A, A, A, A, A, A, A, A,
+  A, B, B, B, B, B, B, B, A,
+  A, B, B, B, B, B, B, B, A
+};
+#undef A
+#undef B
+
+#endif // !_TPM_gallows_hpp_
+
+// gallows.tpm ends here

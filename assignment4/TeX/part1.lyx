@@ -1,0 +1,429 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass scrbook
+\options bibliography=totoc,index=totoc,BCOR10mm,captions=tableheading,titlepage,fleqn
+\use_default_options true
+\master Hangman.lyx
+\begin_modules
+customHeadersFooters
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth -1
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Left Header
+\begin_inset Argument
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+sectionmark
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+rightmark
+\end_layout
+
+\end_inset
+
+
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+Enable page headers and add the chapter to the header line.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Right Header
+\begin_inset Argument
+status open
+
+\begin_layout Plain Layout
+Super Hangman
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Left Footer
+
+\end_layout
+
+\begin_layout Center Footer
+\begin_inset Argument
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+thepage
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Right Footer
+
+\end_layout
+
+\begin_layout Chapter
+Quick Start
+\end_layout
+
+\begin_layout Standard
+You are about to pit your wits against a clever hangman in a high-definition
+ graphical contest of language skill! Do you have what it takes to save
+ lives and be the hero? Can you remain calm under pressure? If you think
+ you do, then prove it with 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+mbox{
+\backslash
+noun{Super Hangman}}
+\end_layout
+
+\end_inset
+
+!
+\end_layout
+
+\begin_layout Section
+TO START THE GAME:
+\end_layout
+
+\begin_layout Subsection
+For Commodore 64/128:
+\end_layout
+
+\begin_layout Enumerate
+Turn on your Commodore 64 or 128, disk drive and monitor.
+\end_layout
+
+\begin_layout Enumerate
+After the red 
+\begin_inset Quotes eld
+\end_inset
+
+busy
+\begin_inset Quotes erd
+\end_inset
+
+ light on the disk drive goes off, insert the 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+mbox{
+\backslash
+noun{Super Hangman}}
+\end_layout
+
+\end_inset
+
+ disk into the disk drive with the label side up and close the disk drive
+ door.
+\end_layout
+
+\begin_layout Enumerate
+Type: 
+\family typewriter
+LOAD 
+\begin_inset Quotes eld
+\end_inset
+
+*
+\begin_inset Quotes erd
+\end_inset
+
+,8,1
+\family default
+ and press RETURN.
+\end_layout
+
+\begin_layout Subsection
+For Apple II:
+\end_layout
+
+\begin_layout Enumerate
+Insert the 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+mbox{
+\backslash
+noun{Super Hangman}}
+\end_layout
+
+\end_inset
+
+ disk into the disk drive with the label side up and close the disk door.
+\end_layout
+
+\begin_layout Enumerate
+Turn on your Apple computer.
+\end_layout
+
+\begin_layout Subsection
+For IBM:
+\end_layout
+
+\begin_layout Enumerate
+Insert the 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+mbox{
+\backslash
+noun{Super Hangman}}
+\end_layout
+
+\end_inset
+
+ disk into the disk drive.
+\end_layout
+
+\begin_layout Enumerate
+Turn on your IBM PC/PCjr or clone.
+\end_layout
+
+\begin_layout Enumerate
+Start the game by typing 
+\family typewriter
+HANGMAN
+\family default
+, the location of your word file, and the number of guesses:
+\end_layout
+
+\begin_deeper
+\begin_layout Quote
+
+\family typewriter
+A:
+\backslash
+>HANGMAN B:
+\backslash
+WORDS.DAT 8
+\end_layout
+
+\end_deeper
+\begin_layout Section
+TO QUIT THE GAME
+\end_layout
+
+\begin_layout Subsection
+For Commodore 64/128:
+\end_layout
+
+\begin_layout Enumerate
+Remove the 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+mbox{
+\backslash
+noun{Super Hangman}}
+\end_layout
+
+\end_inset
+
+ disk from the drive.
+\end_layout
+
+\begin_layout Enumerate
+Turn off the Commodore 64 or 128.
+\end_layout
+
+\begin_layout Enumerate
+Turn off the disk drive and monitor.
+\end_layout
+
+\begin_layout Subsection
+For Apple II:
+\end_layout
+
+\begin_layout Enumerate
+Remove the 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+mbox{
+\backslash
+noun{Super Hangman}}
+\end_layout
+
+\end_inset
+
+ disk from the drive.
+\end_layout
+
+\begin_layout Enumerate
+Turn off the Apple computer.
+\end_layout
+
+\begin_layout Enumerate
+Turn off the monitor.
+\end_layout
+
+\begin_layout Subsection
+For IBM:
+\end_layout
+
+\begin_layout Enumerate
+Press the 
+\family typewriter
+CONTROL
+\family default
+ and 
+\family typewriter
+C
+\family default
+ keys together.
+\end_layout
+
+\begin_layout Enumerate
+Remove the 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+mbox{
+\backslash
+noun{Super Hangman}}
+\end_layout
+
+\end_inset
+
+ disk from the drive.
+\end_layout
+
+\begin_layout Enumerate
+Turn off the IBM PC/PCjr or clone.
+\end_layout
+
+\begin_layout Enumerate
+Turn off the monitor.
+\end_layout
+
+\end_body
+\end_document

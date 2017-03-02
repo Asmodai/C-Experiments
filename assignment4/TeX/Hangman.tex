@@ -1,0 +1,181 @@
+%% LyX 2.0.6 created this file.  For more info, see http://www.lyx.org/.
+%% Do not edit unless you really know what you are doing.
+\documentclass[10pt,a4paper,oneside,english,intoc,bibliography=totoc,index=totoc,BCOR10mm,captions=tableheading,titlepage,fleqn]{scrbook}
+\usepackage{beraserif}
+\usepackage{berasans}
+\usepackage{beramono}
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage[T1]{fontenc}
+\usepackage[latin9]{inputenc}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\setcounter{secnumdepth}{-2}
+\usepackage{color}
+\usepackage{babel}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage[unicode=true,
+ bookmarks=true,bookmarksnumbered=true,bookmarksopen=true,bookmarksopenlevel=1,
+ breaklinks=false,pdfborder={0 0 0},backref=false,colorlinks=true]
+ {hyperref}
+\hypersetup{pdftitle={Super Hangman Manual},
+ pdfauthor={Paul Ward},
+ pdfpagelayout=OneColumn, pdfnewwindow=true, pdfstartview=XYZ, plainpages=false}
+
+\makeatletter
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% LyX specific LaTeX commands.
+\pdfpageheight\paperheight
+\pdfpagewidth\paperwidth
+
+\providecommand{\LyX}{\texorpdfstring%
+  {L\kern-.1667em\lower.25em\hbox{Y}\kern-.125emX\@}
+  {LyX}}
+
+\@ifundefined{date}{}{\date{}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% User specified LaTeX commands.
+% increases link area for cross-references and autoname them
+\AtBeginDocument{\renewcommand{\ref}[1]{\mbox{\autoref{#1}}}}
+\addto\extrasenglish{%
+ \renewcommand*{\equationautorefname}[1]{}
+ \renewcommand{\sectionautorefname}{sec.\negthinspace}
+ \renewcommand{\subsectionautorefname}{sec.\negthinspace}
+ \renewcommand{\subsubsectionautorefname}{sec.\negthinspace}
+ \renewcommand{\figureautorefname}{Figure \negthinspace}
+ \renewcommand{\tableautorefname}{Table \negthinspace}
+}
+
+\renewcommand{\thefigure}{\Roman{figure}}
+
+% in case somebody want to have the label "Equation"
+%\renewcommand{\eqref}[1]{Equation~(\negthinspace\autoref{#1})}
+
+% that links to image floats jumps to the beginning
+% of the float and not to its caption
+\usepackage[figure]{hypcap}
+
+% the pages of the TOC is numbered roman
+% and a pdf-bookmark for the TOC is added
+\let\myTOC\tableofcontents
+\renewcommand\tableofcontents{%
+  \frontmatter
+  \pdfbookmark[1]{\contentsname}{}
+  \myTOC
+  \mainmatter }
+
+% makes caption labels bold
+\setkomafont{captionlabel}{\bfseries}
+\setcapindent{1em}
+
+% enables calculations
+\usepackage{calc}
+
+% fancy page header/footer settings
+\renewcommand{\chaptermark}[1]{\markboth{#1}{#1}}
+\renewcommand{\sectionmark}[1]{\markright{\thesection\ #1}}
+
+% increases the bottom float placement fraction
+\renewcommand{\bottomfraction}{0.5}
+
+% avoids that floats are placed above its sections
+\let\mySection\section\renewcommand{\section}{\suppressfloats[t]\mySection}
+
+%
+\usepackage[parfill]{parskip}
+\usepackage{hyperref}
+\usepackage{bookmark}
+\usepackage{xstring}
+\usepackage{makeidx}
+
+\makeindex
+
+\makeatother
+
+\begin{document}
+\pagestyle{plain}\thispagestyle{empty}\pagenumbering{gobble}\renewcommand{\headrulewidth}{0pt}
+
+\include{version}
+
+
+\publishers{%
+\makebox[0.5\paperwidth]{%
+\includegraphics[scale=0.35]{hangman}%
+}}
+
+\maketitle
+\include{copyright}
+
+\cleardoublepage{}
+
+
+\lhead{\rightmark}
+
+
+\rhead[\leftmark]{}
+
+
+\lfoot[\thepage]{}
+
+
+\cfoot{}
+
+
+\rfoot[]{\thepage}
+
+\pagenumbering{roman}\renewcommand{\headrulewidth}{0.4pt}
+
+\tableofcontents{}
+
+\cleardoublepage{}
+
+\pagenumbering{arabic}
+
+\include{preface}
+
+\cleardoublepage{}
+
+\pagestyle{fancy}
+
+
+\lhead[\chaptername~\thechapter]{\rightmark}
+
+\include{part1}
+
+\include{part2}
+
+\cleardoublepage{}
+
+
+\lhead[]{Licenses}
+
+
+\rhead[Licenses]{}
+
+\bookmarksetup{startatroot}
+
+\appendix
+\include{fdl}
+
+\include{gpl}
+
+\cleardoublepage{}
+
+
+\lhead[]{\rightmark}
+
+
+\rhead[\leftmark]{}
+
+\bookmarksetup{startatroot}
+
+\cleardoublepage{}
+
+
+\lhead[]{Index}
+
+
+\rhead[Index]{}
+
+\printindex
+\end{document}
